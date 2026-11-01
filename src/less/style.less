@@ -1,0 +1,98 @@
+
+@primary-bg-color: #0e69f1;
+@primary-txt-color: #212428;
+@border-color: #dee2e6f3;
+@secondary-bg-color: #fff;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: @secondary-bg-color;
+  color: @primary-txt-color;
+}
+
+main {
+  width: 100%;
+  max-width: 1140px;
+  margin: auto;
+  padding: 48px 24px;
+}
+
+h2 {
+  padding-bottom: 8px;
+  border-bottom: 1px solid @border-color;
+}
+
+.profile {
+  max-width: 380px;
+  margin: 32px auto;
+  text-align: center;
+
+  img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  a {
+    color: @primary-bg-color;
+  }
+}
+
+.cards-holder {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex: 1 1 400px;
+  border: 1px solid @border-color;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px #00000012;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    flex: 1;
+
+    h3 {
+      margin: 0 0 12px;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+  }
+}
+
+.card-footer {
+  align-self: flex-start;
+  margin-top: 12px;
+  padding: 8px 14px;
+  background: @primary-bg-color;
+  border-radius: 5px;
+
+  &:hover {
+    background: darken(@primary-bg-color, 10%);
+  }
+  a{
+    text-decoration: none;
+    color: @primary-txt-color;
+  }
+}
